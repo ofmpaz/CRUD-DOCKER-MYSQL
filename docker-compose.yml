@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: meu-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: senha123
+      MYSQL_DATABASE: meubanco
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
